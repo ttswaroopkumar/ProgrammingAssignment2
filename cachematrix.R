@@ -35,14 +35,13 @@ cacheSolve <- function(x, ...) {
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
-# If the value of Inverse is NOT null, then return the cached data and exit this function.
+                # If the value of Inverse is NOT null, then return the cached data and exit this function.
                 return(m)
         }
-# If the value of Inverse is null, then proceed further to calculate the inverse afresh.
- 
+        # If the value of Inverse is null, then proceed further to calculate the inverse afresh.
         data <- x$get()
         m <- solve(data, ...)
-# Cache the calculated inverse
+        # Cache the calculated inverse
         x$setinverse(m)
         m
  
