@@ -41,7 +41,7 @@ cacheSolve <- function(x, ...) {
         # If the value of Inverse is null, then calculates the inverse afresh.
         data <- x$get()
         m <- solve(data, ...)
-        # Cache the calculated inverse
+        # Caching the calculated inverse
         x$setinverse(m)
         m
 }
